@@ -1,4 +1,4 @@
-﻿*# HangMan
+﻿# HangMan
 A simple game of hangman.
 
 # About HangMan
