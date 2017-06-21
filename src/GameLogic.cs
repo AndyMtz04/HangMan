@@ -123,5 +123,17 @@ namespace hangman
                 Console.Write(letter);
             }
         }
+
+        public void UserInput()
+        {
+            char userInput = Console.ReadKey().KeyChar;
+
+            while (!char.IsLetter(userInput))
+            {
+                userInput = Console.ReadKey().KeyChar;
+            }
+
+            UserLetters.Add(userInput);
+        }
     }
 }
