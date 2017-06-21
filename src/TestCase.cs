@@ -39,35 +39,35 @@ namespace hangman
             gl.RandomWord = "abilities";
             gl.DisplayWord();
             string expected = "a b i l i t i e s";
-            Assert.AreEqual(expected, gl.WordDisplay);
+            Assert.AreEqual(expected, gl.DisplayWord());
 
             List<char> usedLetters2 = new List<char> { 'a', 'l', 't', 's', 'e' };
             gl.UserLetters = usedLetters2;
             gl.RandomWord = "abilities";
             gl.DisplayWord();
             string expected2 = "a _ _ l _ t _ e s";
-            Assert.AreEqual(expected2, gl.WordDisplay);
+            Assert.AreEqual(expected2, gl.DisplayWord());
 
             List<char> usedLetters3 = new List<char> { };
             gl.UserLetters = usedLetters3;
             gl.RandomWord = "abilities";
             gl.DisplayWord();
             string expected3 = "_ _ _ _ _ _ _ _ _";
-            Assert.AreEqual(expected3, gl.WordDisplay);
+            Assert.AreEqual(expected3, gl.DisplayWord());
 
             List<char> usedLetters4 = new List<char> { '1', '2', '3', 'b', 'a' };
             gl.UserLetters = usedLetters4;
             gl.RandomWord = "abilities";
             gl.DisplayWord();
             string expected4 = "a b _ _ _ _ _ _ _";
-            Assert.AreEqual(expected4, gl.WordDisplay);
+            Assert.AreEqual(expected4, gl.DisplayWord());
 
             List<char> usedLetters5 = new List<char> { 'A', 'L', 'T', 'S', 'E' };
             gl.UserLetters = usedLetters5;
             gl.RandomWord = "abilities";
             gl.DisplayWord();
             string expected5 = "a _ _ l _ t _ e s";
-            Assert.AreEqual(expected5, gl.WordDisplay);
+            Assert.AreEqual(expected5, gl.DisplayWord());
         }
 
         [TestCase]

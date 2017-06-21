@@ -9,7 +9,6 @@ namespace hangman
     {
         public int MaxTries { get; set; }
         public string RandomWord { get; set; }
-        public string WordDisplay { get; set; }
         public int WrongCount { get; set; }
         public string WordFile { get; set; }
         public List<char> UserLetters { get; set; }
@@ -18,7 +17,6 @@ namespace hangman
         {
             MaxTries = 6;
             RandomWord = string.Empty;
-            WordDisplay = string.Empty;
             WrongCount = 0;
             WordFile = userFile;
             UserLetters = new List<char> { };
@@ -33,7 +31,7 @@ namespace hangman
             RandomWord = rndWord;
         }
 
-        public void DisplayWord()
+        public string DisplayWord()
         {
             string resultWord = "";
             List<char> lowCharList = LowerCharList(UserLetters);
@@ -51,7 +49,7 @@ namespace hangman
                 }
             }
 
-            WordDisplay = resultWord.TrimEnd();
+            return resultWord.TrimEnd();
         }
 
         public List<char> LowerCharList(List<char> CharList)
@@ -116,6 +114,14 @@ namespace hangman
             }
 
             return false;
+        }
+
+        public void DisplayLetters()
+        {
+            foreach (char letter in UserLetters)
+            {
+                Console.Write(letter);
+            }
         }
     }
 }
