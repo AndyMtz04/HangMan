@@ -1,13 +1,13 @@
 ﻿# HangMan
-A simple game of hangman.
+A console hangman game
 
 # About HangMan
 HangMan was created to learn the C# language.
 
 # Setup
 
-Enter the wordlist.txt full file path into Program.cs to start the game.
+To start the game, enter the wordlist.txt full file path into Program.cs and then compile.
 
 # ToDo
-* Fix issue with no user input.
+* Improve user input
 
